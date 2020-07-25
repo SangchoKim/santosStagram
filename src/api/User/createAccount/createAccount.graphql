@@ -1,13 +1,13 @@
 type Mutation {
-    createAccount(
-            userName:String!, 
-            email:String!, 
-            firstName:String, 
-            lastName:String, 
-            bio:String
-        ) : User!
+  createAccount(
+    userName: String!
+    email: String!
+    firstName: String
+    lastName: String
+    bio: String
+  ): User!
 }
 
 type Query {
-    test: String!
+  test: String!
 }
