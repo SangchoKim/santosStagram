@@ -15,3 +15,18 @@
 - 회원가입
 - 사진 업로드 / 수정 / 삭제
 
+## 기능 
+- Create account
+- Request Secret
+- Confirm Secret (Login)
+- Like / Unlike a photo
+- Comment on a photo
+- Search by user
+- Search by location 
+- See user profile
+- Follow / unfollow User
+- See the full photo
+- Edit my profile
+- Upload a photo
+- Edit the photo (Delete)
+- See the feed

@@ -4,7 +4,7 @@ import {
 
 export default {
     Mutation: {
-        createAccount: async (_, args) => {
+        createAccount: async (_, args, {request}) => {
             const {
                 userName,
                 email,
