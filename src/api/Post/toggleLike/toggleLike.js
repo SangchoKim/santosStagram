@@ -23,6 +23,7 @@ export default {
             
             try {
                 const existingLike = await prisma.$exists.like(filterOption);
+                console.log(existingLike);
                 if(existingLike){
                     await prisma.deleteManyLikes(filterOption);
                 }else{
