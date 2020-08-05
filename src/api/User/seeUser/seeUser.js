@@ -5,20 +5,14 @@ import {
 
 export default {
     Query: {
-        seeUser: async (_, args, {
-            request,
-            isAuthenticated
-        }) => {
+        seeUser: async (_, args) => {
             const {
                 id
             } = args;
             try {
-                return await prisma.user({
-                    where: {
-                        id
-                    },
-                })
-               
+                const user = await prisma.user({id});
+                const posts = await prisma.user({id}).posts();
+                return { user, posts }
             } catch (error) {
                 console.log(error)
                 return false;
