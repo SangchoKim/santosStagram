@@ -9,7 +9,9 @@ import './env';
 import {
     authenticateJwt
 } from './passport';
-
+import {
+    isAuthenticated
+} from './middlewares';
 const PORT = process.env.PORT || 4000;
 
 const server = new GraphQLServer({
@@ -17,9 +19,10 @@ const server = new GraphQLServer({
     context: ({
         request
     }) => ({
-        request
+        request,
+        isAuthenticated
     })
-}); 
+});
 
 server.express.use(logger('dev'));
 server.express.use(authenticateJwt);
